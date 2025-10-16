@@ -60,7 +60,7 @@ const Milestones = () => {
   ];
 
   return (
-    <section id="milestones" className="py-20 px-6 bg-gray-800">
+    <section id="milestones" className="pt-28 pb-20 px-6 bg-gray-800">
       <h2 className="text-4xl font-bold mb-8 text-center text-blue-400">Milestones</h2>
       <p className="text-center mb-12 text-base">The path to our diploma project</p>
       <div className="max-w-2xl mx-auto relative">
