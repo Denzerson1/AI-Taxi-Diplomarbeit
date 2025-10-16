@@ -61,23 +61,39 @@ const Milestones = () => {
 
   return (
     <section id="milestones" className="py-20 px-6 bg-gray-800">
-      <h2 className="text-4xl font-bold mb-4 text-center text-blue-400">Milestones</h2>
-      <p className="text-center mb-12">The path to our diploma project</p>
+      <h2 className="text-4xl font-bold mb-8 text-center text-blue-400">Milestones</h2>
+      <p className="text-center mb-12 text-base">The path to our diploma project</p>
       <div className="max-w-2xl mx-auto relative">
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-blue-500"></div>
         {milestones.map((ms, index) => (
-          <div key={index} className="mb-8 flex items-center relative">
-            <div className="w-32 text-right pr-4">{ms.date}</div>
-            <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center z-10">
-              {ms.status === 'Completed' ? <span className="text-white">✓</span> : <span className="text-white">○</span>}
+          <div
+            key={index}
+            className="mb-8 flex flex-col md:flex-row items-center justify-center md:justify-start relative"
+          >
+            {/* Date - Hidden on mobile, shown on md and up */}
+            <div className="w-full md:w-36 text-right pr-2 md:pr-6 text-xs md:text-sm mb-1 md:mb-0 hidden md:block">
+              {ms.date}
             </div>
-            <div className="flex-1 pl-4 bg-gray-700 p-4 rounded-lg flex items-center">
-              <span className={`inline-block px-3 py-1 rounded-full text-sm mr-4 ${ms.status === 'Completed' ? 'bg-green-500 text-white' : 'bg-gray-500 text-gray-200'}`}>
+            {/* Timeline Circle */}
+            <div className="w-4 h-4 md:w-8 md:h-8 rounded-full bg-blue-500 flex items-center justify-center z-10 ml-0.5 md:ml-0 md:-ml-4">
+              {ms.status === 'Completed' ? (
+                <span className="text-white text-xs md:text-sm">✓</span>
+              ) : (
+                <span className="text-white text-xs md:text-sm">○</span>
+              )}
+            </div>
+            {/* Content */}
+            <div className="w-full md:w-96 pl-2 md:pl-6 bg-gray-700 p-2 md:p-4 rounded-lg flex items-center justify-between">
+              <span
+                className={`inline-block px-1 md:px-3 py-1 rounded-full text-xs md:text-sm mr-2 ${
+                  ms.status === 'Completed' ? 'bg-green-500 text-white' : 'bg-gray-500 text-gray-200'
+                }`}
+              >
                 {ms.status}
               </span>
-              <div>
-                <h3 className="font-semibold">{ms.title}</h3>
-                <p className="text-sm text-gray-300">{ms.description}</p>
+              <div className="ml-4 flex-1 min-w-0">
+                <h3 className="font-semibold text-sm md:text-lg">{ms.title}</h3>
+                <p className="text-xs md:text-sm text-gray-300">{ms.description}</p>
               </div>
             </div>
           </div>
