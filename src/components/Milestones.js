@@ -5,7 +5,7 @@ const Milestones = () => {
   const milestones = [
     {
       date: '17.10.2025',
-      status: 'Completed',
+      status: 'Pending',
       title: 'Feasibility Study',
       description: 'Conduct initial feasibility study for the project.'
     },

@@ -18,7 +18,7 @@ const Imprint = () => {
           <p className="text-white text-base sm:text-lg">Project Type: <span className="text-blue-300">Diploma Thesis in System Technology</span></p>
           <p className="text-white text-base sm:text-lg">Institution: <span className="text-blue-300">TGM Vienna</span></p>
           <p className="text-white text-base sm:text-lg">School Year: <span className="text-blue-300">2025/2026</span></p>
-          <p className="text-white text-base sm:text-lg">Supervisor: <span className="text-blue-300">Eugen Robert Jiresch</span></p>
+          <p className="text-white text-base sm:text-lg">Supervisor: <span className="text-blue-300">Prof. Dr. Eugen Robert Jiresch</span></p>
         </div>
 
         <div className="border-l-4 border-blue-500 pl-6 mb-8">

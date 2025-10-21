@@ -13,8 +13,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-gray-800 py-4 px-6 flex items-center justify-between z-50">
       <div className="flex items-center">
-        <img src="https://placehold.co/40x40?text=Logo" alt="Logo" className="mr-2" />
-        <span className="text-2xl font-bold">Monaco Energy Boat Challenge</span>
+        <img src="/mebc_logo.PNG" alt="Logo" className="mr-2 h-14" />
+        {/*<span className="text-2xl font-bold">Monaco Energy Boat Challenge</span> */}
       </div>
       <div className="md:hidden">
         <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
