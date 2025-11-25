@@ -4,12 +4,6 @@ import React from 'react';
 const Milestones = () => {
   const milestones = [
     {
-      date: '17.10.2025',
-      status: 'Pending',
-      title: 'Feasibility Study',
-      description: 'Conduct initial feasibility study for the project.'
-    },
-    {
       date: '07.11.2025',
       status: 'Completed',
       title: 'Object Detection Prototype',
@@ -23,15 +17,21 @@ const Milestones = () => {
     },
     {
       date: '19.12.2025',
-      status: 'Pending',
+      status: 'In Progress',
       title: 'Interface from Unity to AI',
       description: 'Create interface between Unity and AI systems.'
     },
     {
       date: '09.01.2026',
-      status: 'Pending',
+      status: 'In Progress',
       title: 'Working Boat in Unity with AI',
       description: 'Integrate a working boat model with AI in Unity.'
+    },
+    {
+      date: '25.01.2025',
+      status: 'Pending',
+      title: 'Feasibility Study',
+      description: 'Conduct initial feasibility study for the project.'
     },
     {
       date: '13.02.2026',
@@ -86,7 +86,11 @@ const Milestones = () => {
             <div className="w-full md:w-96 pl-2 md:pl-6 bg-gray-700 p-2 md:p-4 rounded-lg flex items-center justify-between">
               <span
                 className={`inline-block px-1 md:px-3 py-1 rounded-full text-xs md:text-sm mr-2 ${
-                  ms.status === 'Completed' ? 'bg-green-500 text-white' : 'bg-gray-500 text-gray-200'
+                  ms.status === 'Completed'
+                    ? 'bg-green-500 text-white'
+                    : ms.status === 'In Progress'
+                    ? 'bg-orange-300 text-gray-900'
+                    : 'bg-gray-500 text-gray-200'
                 }`}
               >
                 {ms.status}
