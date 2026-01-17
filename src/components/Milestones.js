@@ -17,21 +17,27 @@ const Milestones = () => {
     },
     {
       date: '19.12.2025',
-      status: 'In Progress',
+      status: 'Completed',
       title: 'Interface from Unity to AI',
       description: 'Create interface between Unity and AI systems.'
     },
     {
       date: '09.01.2026',
-      status: 'In Progress',
+      status: 'Completed',
       title: 'Working Boat in Unity with AI',
       description: 'Integrate a working boat model with AI in Unity.'
     },
     {
       date: '25.01.2025',
-      status: 'Pending',
+      status: 'Completed',
       title: 'Feasibility Study',
       description: 'Conduct initial feasibility study for the project.'
+    },
+    {
+      date: '03.02.2026',
+      status: 'In Progress',
+      title: 'Behaviour Cloning paired with RL in Unity',
+      description: 'Integrate a working boat model with AI in Unity.'
     },
     {
       date: '13.02.2026',
